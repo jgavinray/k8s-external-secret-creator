@@ -1,12 +1,15 @@
 ---
 kind: pipeline
 steps:
-- name: Go vet
+- name: Make vet
   image: golang
   commands:
-  - go vet ./...
-- name: Go tests
+  - make vet
+- name: Make test
   image: golang
   commands:
-  - go test
-
+  - make test
+- name: Make build
+  image: golang
+  commands:
+    - make build
