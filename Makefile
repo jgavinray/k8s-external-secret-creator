@@ -16,3 +16,6 @@ format:			## Runs go fmt against code
 
 build:			## Builds the binary
 	@go build -o bin/
+
+clean:			## Delete all build binaries
+	@rm bin/*
