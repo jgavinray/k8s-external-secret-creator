@@ -14,3 +14,5 @@ A user/developer will know what variables and secrets are required for their app
 By providing a custom resource for a user, they can generate/manage secrets without having to know what backend the operations team has chosen for their secrets manager.    
 
 The goal is simple, create a customer resource definition that operates like the aforementioned kubernetes-external-secrets, but also add in the ability to generate new secrets on the fly.
+
+## Based scaffolding provided by operator-sdk v1.13.1

@@ -1,15 +1,8 @@
 ---
 kind: pipeline
 steps:
-- name: Make vet
+- name: make operator
   image: golang
   commands:
-  - make vet
-- name: Make test
-  image: golang
-  commands:
-  - make test
-- name: Make build
-  image: golang
-  commands:
-    - make build
+  - make
+
