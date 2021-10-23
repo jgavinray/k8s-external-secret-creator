@@ -15,4 +15,29 @@ By providing a custom resource for a user, they can generate/manage secrets with
 
 The goal is simple, create a customer resource definition that operates like the aforementioned kubernetes-external-secrets, but also add in the ability to generate new secrets on the fly.
 
-## Based scaffolding provided by operator-sdk v1.13.1
+Create a new secret:
+```yaml
+apiVersion: secrets.jgavinray.dev/v1alpha1
+kind: ExternalSecretCreate
+metadata:
+  name:  # name it something
+  type:  # string, or ed25519, rsa
+spec:
+  backend: # aws
+  namespace: # namespace
+  secrets:
+    - key: # reference name
+```
+
+Retrieving secret:
+```yaml
+apiVersion: secrets.jgavinray.dev/v1alpha1
+kind: ExternalSecret
+metadata:
+  name: # name
+spec:
+  backend: # aws
+  mappings:
+    - key:  # name of key in secret store
+      name: # name of key that can be consumed by k8s
+```
