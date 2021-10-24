@@ -16,4 +16,13 @@ resources:
   kind: ExternalSecret
   path: github.com/jgavinrary/k8s-external-secrets-manager/api/v1alpha1
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: jgavinray.dev
+  group: cache
+  kind: ExternalSecretCreate
+  path: github.com/jgavinrary/k8s-external-secrets-manager/api/v1alpha1
+  version: v1alpha1
 version: "3"
