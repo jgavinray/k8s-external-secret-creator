@@ -25,11 +25,13 @@ import (
 
 // ExternalSecretSpec defines the desired state of ExternalSecret
 type ExternalSecretSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of ExternalSecret. Edit externalsecret_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// What Backend is going to be used for this secret
+	Backend string `json:"backend"`
+	// Which Namespace will this secret be consumed in
+	Namespace string `json:"namespace"`
+	// What key(s) should be used to reference this secret?
+	Secrets []string `json:"secrets"`
 }
 
 // ExternalSecretStatus defines the observed state of ExternalSecret
