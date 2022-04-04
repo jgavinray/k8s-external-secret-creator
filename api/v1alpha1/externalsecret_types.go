@@ -32,6 +32,8 @@ type ExternalSecretSpec struct {
 	Namespace string `json:"namespace"`
 	// What key(s) should be used to reference this secret?
 	Secrets []string `json:"secrets"`
+	// What type of secret should be created? "string", "ed25519", "rsa"
+	Type string `json:"type"`
 }
 
 // ExternalSecretStatus defines the observed state of ExternalSecret
