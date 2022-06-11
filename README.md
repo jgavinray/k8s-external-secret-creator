@@ -13,7 +13,7 @@ A user/developer will know what variables and secrets are required for their app
 
 By providing a custom resource for a user, they can generate/manage secrets without having to know what backend the operations team has chosen for their secrets manager.    
 
-The goal is simple, create a customer resource definition that operates like the aforementioned kubernetes-external-secrets, but also add in the ability to generate new secrets on the fly.
+The goal is simple, create a customer resource definition that allows the ability to generate new secrets on the fly.
 
 Create a new secret:
 ```yaml
@@ -27,17 +27,4 @@ spec:
   namespace: # namespace
   secrets:
     - key: # reference name
-```
-
-Retrieving secret:
-```yaml
-apiVersion: secrets.jgavinray.dev/v1alpha1
-kind: ExternalSecret
-metadata:
-  name: # name
-spec:
-  backend: # aws
-  mappings:
-    - key:  # name of key in secret store
-      name: # name of key that can be consumed by k8s
 ```
