@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	cachev1alpha1 "github.com/jgavinrary/k8s-external-secrets-manager/api/v1alpha1"
+	cachev1alpha1 "github.com/jgavinrary/k8s-external-secrets-creator/api/v1"
 )
 
 // ExternalSecretCreateReconciler reconciles a ExternalSecretCreate object

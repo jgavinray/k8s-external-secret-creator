@@ -31,8 +31,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/healthz"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 
-	cachev1alpha1 "github.com/jgavinrary/k8s-external-secrets-manager/api/v1alpha1"
-	"github.com/jgavinrary/k8s-external-secrets-manager/controllers"
+	cachev1alpha1 "github.com/jgavinrary/k8s-external-secrets-creator/api/v1"
+	"github.com/jgavinrary/k8s-external-secrets-creator/controllers"
 	//+kubebuilder:scaffold:imports
 )
 

@@ -21,7 +21,6 @@ package drivers
 // The assumption for the provider is that it will acces a key/value pair.
 type Provider interface {
 	PutParameter(key string, value string) error
-	GetParameter(key string) error
 }
 
 // Function to return a Provider interface

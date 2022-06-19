@@ -1,4 +1,4 @@
-# k8s-external-secrets-manager
+# k8s-external-secrets-creator
 [![License: Apache 2](https://img.shields.io/badge/license-Apache%202-blue)](LICENSE) 
 [![Build Status](https://cloud.drone.io/api/badges/jgavinray/k8s-external-secret-manager/status.svg)](https://cloud.drone.io/jgavinray/k8s-external-secret-manager) 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-1.2-0baaaa.svg)](code_of_conduct.md)
@@ -17,7 +17,7 @@ The goal is simple, create a customer resource definition that allows the abilit
 
 Create a new secret:
 ```yaml
-apiVersion: secrets.jgavinray.dev/v1alpha1
+apiVersion: secrets.jgavinray.dev/v1
 kind: ExternalSecretCreate
 metadata:
   name:  # name it something
